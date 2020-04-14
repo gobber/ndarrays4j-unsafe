@@ -59,6 +59,10 @@ public class NdDoubleArray extends AbstractNdArray<DoubleUnsafe>{
 		return vector.get(offset(indexes));
 	}
 
+	public void set(double value, int i) {
+		vector.set(i, value);
+	}
+	
 	public void set(double value, int ... indexes) {
 		vector.set(offset(indexes), value);
 	}

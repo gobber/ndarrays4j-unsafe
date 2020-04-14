@@ -69,6 +69,10 @@ public abstract class AbstractNdArray<T extends Dtype> {
 		return strides;
 	}
 	
+	public void strides(int[] strides) {
+		this.strides = strides;
+	}
+	
 	public int[] strides() {		
 		return strides;
 	}

@@ -59,6 +59,10 @@ public class NdIntArray extends AbstractNdArray<IntUnsafe>{
 		return vector.get(offset(indexes));
 	}
 
+	public void set(int value, int i) {
+		vector.set(i, value);
+	}
+	
 	public void set(int value, int ... indexes) {
 		vector.set(offset(indexes), value);
 	}

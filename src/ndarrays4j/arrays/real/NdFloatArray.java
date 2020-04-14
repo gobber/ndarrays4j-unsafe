@@ -58,7 +58,11 @@ public class NdFloatArray extends AbstractNdArray<FloatUnsafe>{
 	public float get(int ... indexes) {
 		return vector.get(offset(indexes));
 	}
-
+	
+	public void set(float value, int i) {
+		vector.set(i, value);
+	}
+	
 	public void set(float value, int ... indexes) {
 		vector.set(offset(indexes), value);
 	}

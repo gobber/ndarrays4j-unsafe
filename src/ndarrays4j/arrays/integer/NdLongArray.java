@@ -59,6 +59,10 @@ public class NdLongArray extends AbstractNdArray<LongUnsafe>{
 		return vector.get(offset(indexes));
 	}
 
+	public void set(long value, int i) {
+		vector.set(i, value);
+	}
+	
 	public void set(long value, int ... indexes) {
 		vector.set(offset(indexes), value);
 	}

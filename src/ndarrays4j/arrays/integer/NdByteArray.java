@@ -59,10 +59,14 @@ public class NdByteArray extends AbstractNdArray<ByteUnsafe>{
 		return vector.get(offset(indexes));
 	}
 
+	public void set(byte value, int i) {
+		vector.set(i, value);
+	}
+	
 	public void set(byte value, int ... indexes) {
 		vector.set(offset(indexes), value);
 	}
-
+	
 	@Override
 	public NdByteArray duplicate() {
 		NdByteArray copy = new NdByteArray(shape(), strides(), order(), vector.duplicate());			
